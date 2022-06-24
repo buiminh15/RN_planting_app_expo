@@ -1,4 +1,4 @@
-import HomeScreen from "./HomScreen";
-import SettingsScreen from "./SettingsScreen";
+import HomeScreen from "./HomeScreen";
+import PlantingDetail from "./PlantingDetail";
 
-export { HomeScreen, SettingsScreen };
+export { HomeScreen, PlantingDetail };

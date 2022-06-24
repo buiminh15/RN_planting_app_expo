@@ -10,7 +10,7 @@ import { tabs } from "../../constants/config";
 const Tab = createBottomTabNavigator();
 
 function Icon({ tab, focused }) {
-  if (tab.name === "Camera") {
+  if (tab.name === "CameraTab") {
     return (
       <TouchableOpacity
         onPress={() => console.log('camera')}

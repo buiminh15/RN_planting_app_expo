@@ -1,30 +1,30 @@
-import HomeScreen from "../src/components/HomeScreen";
+import HomeStackScreen from "../src/navigation/HomeStack";
 
 const tabs = [
   {
-    name: "Home",
+    name: "HomeTab",
     icon: require("../assets/icons/flash_icon.png"),
-    component: HomeScreen,
+    component: HomeStackScreen,
   },
   {
-    name: "Box",
+    name: "BoxTab",
     icon: require("../assets/icons/cube_icon.png"),
-    component: HomeScreen,
+    component: HomeStackScreen,
   },
   {
-    name: "Camera",
+    name: "CameraTab",
     icon: require("../assets/icons/camera.png"),
-    component: HomeScreen,
+    component: HomeStackScreen,
   },
   {
-    name: "Search",
+    name: "SearchTab",
     icon: require("../assets/icons/search_icon.png"),
-    component: HomeScreen,
+    component: HomeStackScreen,
   },
   {
-    name: "Favorite",
+    name: "FavoriteTab",
     icon: require("../assets/icons/heart_icon.png"),
-    component: HomeScreen,
+    component: HomeStackScreen,
   },
 ];
 

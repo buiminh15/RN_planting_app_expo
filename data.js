@@ -1,4 +1,4 @@
-import { images } from "./constants";
+import { icons, images } from "./constants";
 
 const newPlantsData = [
   {
@@ -50,4 +50,47 @@ const friendListData = [
   },
 ];
 
-export { friendListData, newPlantsData };
+const requirementsData = [
+  {
+    id: 1,
+    name: 'Sunlight',
+    value: 15,
+    unit: '°C',
+    total: 20,
+    icon: icons.sun,
+  },
+  {
+    id: 2,
+    name: 'Water',
+    value: 250,
+    unit: 'ML Daily',
+    total: 1000,
+    icon: icons.drop,
+  },
+  {
+    id: 3,
+    name: 'Room Temp',
+    value: 25,
+    unit: '°C',
+    total: 30,
+    icon: icons.temperature,
+  },
+  {
+    id: 4,
+    name: 'Soil',
+    value: 3,
+    unit: 'Kg',
+    total: 10,
+    icon: icons.garden,
+  },
+  {
+    id: 5,
+    name: 'Fertilizer',
+    value: 150,
+    unit: 'Mg',
+    total: 250,
+    icon: icons.seed,
+  },
+]
+
+export { friendListData, newPlantsData, requirementsData };

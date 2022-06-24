@@ -1,9 +1,7 @@
 import { NavigationContainer } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 import { useFonts } from "expo-font";
 import Tabs from "./src/navigation/Tabs";
 
-const Stack = createStackNavigator();
 
 function App() {
   const [loaded] = useFonts({

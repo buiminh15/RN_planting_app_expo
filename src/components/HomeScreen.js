@@ -16,7 +16,7 @@ import {
 } from "react-native-responsive-screen";
 import { newPlantsData } from "../../data";
 
-export default function HomeScreen() {
+export default function HomeScreen({ navigation }) {
   function renderNewPlants() {
     return (
       <View>
@@ -57,7 +57,9 @@ export default function HomeScreen() {
 
   function renderPlantItem({ item }) {
     return (
-      <TouchableOpacity onPress={() => console.log("aa")}>
+      <TouchableOpacity
+        onPress={() => navigation.navigate("PlantingDetail", { item })}
+      >
         <ImageBackground
           source={item.img}
           imageStyle={{ borderRadius: wp(3) }}
@@ -217,7 +219,13 @@ export default function HomeScreen() {
                 marginLeft: wp(-4),
               }}
             />
-            <Text style={{ ...FONTS.body4, color: COLORS.secondary, marginLeft: wp(2) }}>
+            <Text
+              style={{
+                ...FONTS.body4,
+                color: COLORS.secondary,
+                marginLeft: wp(2),
+              }}
+            >
               +2 More
             </Text>
           </View>
@@ -262,7 +270,6 @@ export default function HomeScreen() {
       style={{
         flex: 1,
         backgroundColor: COLORS.white,
-        paddingHorizontal: wp(2),
       }}
     >
       <View style={{ backgroundColor: COLORS.gray, flex: 1 }}>
@@ -275,7 +282,7 @@ export default function HomeScreen() {
           <View
             style={{
               backgroundColor: COLORS.primary,
-
+              marginHorizontal: wp(2),
               borderRadius: wp(8),
             }}
           >
