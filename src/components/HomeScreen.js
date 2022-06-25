@@ -14,7 +14,7 @@ import {
   heightPercentageToDP as hp,
   widthPercentageToDP as wp,
 } from "react-native-responsive-screen";
-import { newPlantsData } from "../../data";
+import { friendListData, newPlantsData } from "../../data";
 
 export default function HomeScreen({ navigation }) {
   function renderNewPlants() {
@@ -162,6 +162,28 @@ export default function HomeScreen({ navigation }) {
     );
   }
 
+  function renderFriendsList(list) {
+    let modifiedList = list;
+    if (list.length > 3) {
+      modifiedList = list.slice(0, 3);
+    }
+    return modifiedList.map((friend, index) => (
+      <Image
+        key={`friend-id-${friend.id}`}
+        source={friend.img}
+        resizeMode="contain"
+        style={{
+          width: wp(10),
+          height: wp(10),
+          borderColor: COLORS.primary,
+          borderWidth: 2,
+          borderRadius: wp(10),
+          marginLeft: index === 0 ? 0 : wp(-4)
+        }}
+      />
+    ));
+  }
+
   function renderAddedFriends() {
     return (
       <View
@@ -184,50 +206,18 @@ export default function HomeScreen({ navigation }) {
           }}
         >
           <View style={{ flexDirection: "row", alignItems: "center" }}>
-            <Image
-              source={images.profile1}
-              resizeMode="contain"
-              style={{
-                width: wp(10),
-                height: wp(10),
-                borderColor: COLORS.primary,
-                borderWidth: 2,
-                borderRadius: wp(10),
-              }}
-            />
-            <Image
-              source={images.profile2}
-              resizeMode="contain"
-              style={{
-                width: wp(10),
-                height: wp(10),
-                borderColor: COLORS.primary,
-                borderWidth: 2,
-                borderRadius: wp(10),
-                marginLeft: wp(-4),
-              }}
-            />
-            <Image
-              source={images.profile3}
-              resizeMode="contain"
-              style={{
-                width: wp(10),
-                height: wp(10),
-                borderColor: COLORS.primary,
-                borderWidth: 2,
-                borderRadius: wp(10),
-                marginLeft: wp(-4),
-              }}
-            />
-            <Text
-              style={{
-                ...FONTS.body4,
-                color: COLORS.secondary,
-                marginLeft: wp(2),
-              }}
-            >
-              +2 More
-            </Text>
+            {renderFriendsList(friendListData)}
+            {friendListData.length > 3 && (
+              <Text
+                style={{
+                  ...FONTS.body4,
+                  color: COLORS.secondary,
+                  marginLeft: wp(2),
+                }}
+              >
+                +{friendListData.length - 3} More
+              </Text>
+            )}
           </View>
           <View style={{ flexDirection: "row", alignItems: "center" }}>
             <Text

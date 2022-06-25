@@ -48,6 +48,10 @@ const friendListData = [
     id: 4,
     img: images.profile5,
   },
+  {
+    id: 5,
+    img: images.profile5,
+  },
 ];
 
 const requirementsData = [
