@@ -197,17 +197,17 @@ function renderRequirements() {
             alignItems: "center",
           }}
         >
-          <View style={{ flex: 0.2 }}></View>
+          <View style={{ flex: 0.1 }}></View>
           <View
             style={{
-              flex: 0.8,
+              flex: 0.7,
             }}
           >
             <Text style={{ ...FONTS.h4, color: COLORS.gray }}>
               Almost 2 week of growing time
             </Text>
           </View>
-          <View style={{ flex: 0.2 }}>
+          <View style={{ flex: 0.3 }}>
             <Image
               source={icons.downArrow}
               resizeMode="contain"
@@ -226,7 +226,7 @@ function IconReq({ icon, value, total }) {
       <View
         style={{
           width: wp(12),
-          height: hp(7),
+          height: hp(6),
           marginTop: hp(3),
 
           borderRadius: wp(4),
